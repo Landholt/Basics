@@ -1,7 +1,6 @@
 //#include <iostream>
-#include "test.cpp"
-#include "main.c"
-//#include "hello.asm"
+#include "Cpp/test.cpp"
+#include "C/main.c"
 
 extern "C" void assemblyhi();
 

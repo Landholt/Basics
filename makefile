@@ -4,10 +4,10 @@
 #foo: foo.c
 #	gcc -std=c99 -g foo.c -o foo -lm && ./foo
 
-asky: main.cpp main.asm
-	yasm -g dwarf2 -f elf64 main.asm -o asm.o -l main.lst
-	g++ -g -no-pie -o asky main.cpp asm.o && ./asky
+basics: main.cpp Asm/main.asm
+	yasm -g dwarf2 -f elf64 Asm/main.asm -o Asm/asm.o -l Asm/main.lst
+	g++ -g -no-pie -o basics main.cpp Asm/asm.o && ./basics
 
 clean:
-	rm asky asm.o main.lst && clear && ls
+	rm basics Asm/asm.o Asm/main.lst && clear && ls
 
