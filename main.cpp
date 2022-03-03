@@ -5,7 +5,7 @@
 int main() {
     std::cout << "\033[2J\033[1;1H";
     cpp::printy();
-    printy_c();
+    numeral_helpc();
     cpp::numeral_help();
     unsigned short test = 0b1111111111111111;
     short test1 = 0b1111111111111111;
