@@ -1,5 +1,5 @@
 //#include <iostream>
-
+//namespace
 #include "includes.h"
 
 int main() {
