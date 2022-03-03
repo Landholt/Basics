@@ -2,7 +2,7 @@
 #define INCLUDES_H
 
 #include "c/main.c"
-#include "cpp/integer.cpp"
+#include "cpp/numerals.cpp"
 
 #include "yasm/externs.h"
 
