@@ -1,7 +1,16 @@
-#ifndef FOO_H
-#define FOO_H
+#ifndef EXTERNS_H
+#define EXTERNS_H
 
-extern "C" void assemblyhi();
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+void assemblyhi();
+void foobar();
+void superFunc(int i);
+void or_ex(int i);
+#ifdef __cplusplus
+}
+#endif
 #endif
 

@@ -18,7 +18,9 @@ typedef struct number_example {
 } number_example;
 
 void numeral_helpc() {
-    printf("Numeral Help C Success\n");
+    number_example n;
+    printf("Format specifier and size:\n" 
+            "(signed) short %hi: %%hi, %lu bytes\n", n.s_short, sizeof(n.s_short));
 }
 
 #ifdef __cplusplus
