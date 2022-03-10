@@ -12,11 +12,12 @@ int main() {
     std::cout << test << std::endl << test1 << std::endl;
 //    assemblyhi();
 //    foobar();
-    if_c();*/
+    if_c();
 //    superFunc(8);
     or_ex(14);
     or_ex(7);
-    or_ex(10);
+    or_ex(10);*/
+    main_menu();
     return 0;
 }
 

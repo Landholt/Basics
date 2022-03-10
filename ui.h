@@ -1,19 +1,26 @@
-#ifndef FOO_H
-#define FOO_H
+#ifndef UI_H
+#define UI_H
 
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 using std::cout;
 using std::setw;
+using std::endl;
+using std::string;
+using std::vector;
+using std::system;
 
-std::string lines[][] =
-    ["x86-64 Assembly (x64)", "C (c)", "C++ (cpp)"],
-    ["Sections", "Flow Control:"],
-    ["", "For Loops (for)"];
+vector<string> lang_options = {"x86-64 Assembly (asm)", "C (c)", "C++ (cpp)", "(help)", "(q)uit"};
 
-void print_menu() {
-    for (int i = 0; i < lines.length
+
+void main_menu() {
+    system("clear");
+    for (option : lang_options) {
+    cout << option << setw(10);
+    }
+    cout << endl;
 }
 
 
