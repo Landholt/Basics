@@ -23,12 +23,10 @@ or_ex:
     xor r9, r9
     xor r14, r14
     ;;;;
-    mov r8, 8
-    cmp r8, rdi
-    cmova r9, rcx
-    mov r13, 13
-    cmp r13, rdi
-    cmovl r14, rcx
+    cmp rdi, 8
+    cmovl r9, rcx
+    cmp rdi, 13
+    cmova r14, rcx
     or r9, r14
     cmp r9, rcx
     cmove rsi, r10
