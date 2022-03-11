@@ -4,25 +4,42 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include "cpp/cpp_controller.h"
 
-using std::cout;
-using std::setw;
-using std::endl;
+#define CLEAR system("clear")
+
+using std::cout; using std::cin; using std::endl; using std::flush; using std::setw;
 using std::string;
 using std::vector;
 using std::system;
 
+void load_asm() {}
+void load_c() {}
+
+string usr_choice;
+
 vector<string> lang_options = {"x86-64 Assembly (asm)", "C (c)", "C++ (cpp)", "(help)", "(q)uit"};
 
+string startup_message = "This program is a work in progress.\n\n"
+                            "To navigate, enter the text in parentheses that cooresponds to your desired option\n\n";
 
-void main_menu() {
-    system("clear");
-    for (option : lang_options) {
-    cout << option << setw(10);
+void print_mmenu() {
+    CLEAR;
+    cout << startup_message << flush;
+    for (int i = 0; i < lang_options.size(); i++) {
+        cout << lang_options[i] << setw(20);
     }
     cout << endl;
 }
 
+void handle_mmenu() {
+    cin >> usr_choice;
+    if (usr_choice == "q") {CLEAR; exit(0);}
+    else if (usr_choice == "asm") {load_asm(); }
+    else if (usr_choice == "c") {load_c();}
+    else if (usr_choice == "cpp") {load_cpp();}
+    else {cout << "Not a valid choice" << endl;}
+}
 
 #endif
 

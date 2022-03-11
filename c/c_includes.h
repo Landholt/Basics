@@ -1,6 +1,7 @@
-#ifndef FOO_H
-#define FOO_H
+#ifndef C_INCLUDES_H
+#define C_INCLUDES_H
 
+#include "control_flow.c"
 
 
 #endif

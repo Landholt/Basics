@@ -1,7 +1,11 @@
 //#include <iostream>
 //
 #include "includes.h"
-
+#include <fstream>
+#include "ui.h"
+void printlines(int first, int last) {
+    
+}
 int main() {
    /* std::cout << "\033[2J\033[1;1H";
     cpp::printy();
@@ -17,7 +21,9 @@ int main() {
     or_ex(14);
     or_ex(7);
     or_ex(10);*/
-    main_menu();
+//    main_menu();
+    print_mmenu();
+    handle_mmenu();
     return 0;
 }
 
