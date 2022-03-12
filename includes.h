@@ -2,9 +2,7 @@
 #define INCLUDES_H
 
 #include "yasm/externs.h"
-#include "cpp/cpp_includes.h"
-/****** CONTROL FLOW ******/
-#include "c/control_flow.c"
+#include "control/controller.cpp"
 
 /****** NUMERALS ******/
 #include "c/numerals.c"

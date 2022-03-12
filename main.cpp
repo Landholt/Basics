@@ -1,11 +1,7 @@
 //#include <iostream>
 //
 #include "includes.h"
-#include <fstream>
-#include "ui.h"
-void printlines(int first, int last) {
-    
-}
+
 int main() {
    /* std::cout << "\033[2J\033[1;1H";
     cpp::printy();

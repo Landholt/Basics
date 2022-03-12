@@ -1,10 +1,7 @@
 #ifndef UI_H
 #define UI_H
 
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include "cpp/cpp_controller.h"
+#include "control/controller.cpp"
 
 #define CLEAR system("clear")
 
@@ -40,6 +37,19 @@ void handle_mmenu() {
     else if (usr_choice == "cpp") {load_cpp();}
     else {cout << "Not a valid choice" << endl;}
 }
+
+/*void print_lines(std::string ifile, int start, int end) {
+    std::ifstream file(ifile);
+    std::string line;
+    int i = 0;
+    while (std::getline(file, line)) {
+        if (++i < start) {continue;}
+        if (i > end) {break;}
+        std::cout << line << std::endl;
+    }
+    file.close();
+    std::cout << "print_lines works good" << std::endl;
+}*/
 
 #endif
 
