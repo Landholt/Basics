@@ -6,6 +6,7 @@
 #include "universal.h"
 
 #include "../cpp/ctrl_flow.cpp"
+#include "../yasm/externs.h"
 
 #define CPPTYPES {"Data Types:", "(int)eger types"}
 #define CPP_CTRL_FLOW {"Control Flow:", "(for) loop"}

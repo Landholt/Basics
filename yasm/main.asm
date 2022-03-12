@@ -8,7 +8,7 @@ extern console_print
 
 section .text
 
-;global assemblyhi
+global assemblyhi
 assemblyhi:
 	mov rsi, stuff
 	mov rdx, 16
