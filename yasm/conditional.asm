@@ -1,6 +1,8 @@
 section .data
+
 TRUTH equ 1
 nor_msg db "Number is not greater than 13 or less than 8"
+nor_msglen dd 44
 or_msg db "Number is greater than 13 or less than 8"
 or_msglen dd 40
 and_msg db "Number is positive and divisible by 3"
@@ -13,10 +15,10 @@ extern console_print
 
 section .text
 
-global or_ex
-or_ex:
+global yasm_cmov_or_ex
+yasm_cmov_or_ex:
     mov rsi, nor_msg
-    mov rdx, 44
+    mov edx, dword [nor_msglen]
     mov rcx, TRUTH
     mov r10, or_msg
     ;;;;

@@ -1,10 +1,11 @@
 #ifndef CPP_CONTROLLER_CPP
 #define CPP_CONTROLLER_CPP
+
 #include "cpp_controller.h"
 
 void init_cpp() {
     cppmenu = {};
-    cppmenu.push_back({""});
+    cppmenu.push_back({""}); // Workaround to avoid printing with leading whitespace
     cppmenu.push_back(CPPTYPES);
     cppmenu.push_back(CPP_CTRL_FLOW);
 }
@@ -31,7 +32,7 @@ void handle_cpp() {
     std::cin >> cpp_choice;
     while(1) { 
         if (cpp_choice == "q") {break;}
-        else if (cpp_choice == "for") {handle_for();}
+        else if (cpp_choice == "for") {cpp_for();}
         std::cin >> cpp_choice;
         CLEARSCREEN;
         print_cppmenu();
@@ -39,11 +40,9 @@ void handle_cpp() {
     GOTOMAIN;
 }
 
-void handle_for() {
-    Exemplar e = &cpp_for_ex;
-    Exemplar f = &assemblyhi;
+void cpp_for() {
+    V_exemplar e = &cpp_for_ex;
     print_lines("cpp/ctrl_flow.cpp", CPP_FOR_START, CPP_FOR_END, e);
-    f();
 }
 
 #endif

@@ -2,11 +2,8 @@
 #define INCLUDES_H
 
 #include "yasm/externs.h"
-#include "control/controller.cpp"
-
-/****** NUMERALS ******/
-#include "c/numerals.c"
-#include "cpp/numerals.cpp"
+#include "control/c_controller.cpp"
+#include "control/cpp_controller.cpp"
 
 #include "ui.h"
 

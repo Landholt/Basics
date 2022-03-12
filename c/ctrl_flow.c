@@ -8,6 +8,9 @@ extern "C" {
 
 #include <stdio.h>
 
+#define C_FOR_START 31
+#define C_FOR_END 33
+
 void if_c() {
     int arr[3] = {-1, 0, 1};
     for (int i = 0; i < 3; i++) {
@@ -24,11 +27,10 @@ void if_c() {
     }
 }
 
-void for_c() {
-    int i = 10;
-    for (int i = 0; i < 10; i++) {
-        printf("%d ", i);
-    }
+void c_for_ex() {
+for (int i = 0; i < 10; i++) {
+    printf("%d ", i);
+}
     printf("\n");
 }
 

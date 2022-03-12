@@ -6,7 +6,7 @@
 #define CPP_FOR_END 11
 
 void cpp_for_ex() {
-for (int i = 0; i < 11; i++) {
+for (int i = 0; i < 10; i++) {
     std::cout << i << " ";
 }
 std::cout << std::endl;
