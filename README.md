@@ -1,5 +1,5 @@
 # Basics
-Basic syntax reference of programming basics in various languages.
+A (very much in-progress) syntax reference for various programming languages 
 
 # References
 <p>
