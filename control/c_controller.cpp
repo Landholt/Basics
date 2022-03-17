@@ -32,7 +32,11 @@ void handle_c() {
     std::cin >> c_choice;
     while(1) { 
         if (c_choice == "q") {break;}
-        else if (c_choice == "for") {c_for();}
+        else if (c_choice == "for") {c::for_ex();}
+        else if (c_choice == "while") {c::while_ex();}
+        else if (c_choice == "dowhile") {c::dowhile_ex();}
+        else if (c_choice == "if") {c::if_ex();}
+        else if (c_choice == "break") {c::brkcon_ex();}
         std::cin >> c_choice;
         CLEARSCREEN;
         print_cmenu();
@@ -40,9 +44,28 @@ void handle_c() {
     GOTOMAIN;
 }
 
-void c_for() {
+namespace c {
+void for_ex() {
     V_exemplar e = &c_for_ex;
     print_lines("c/ctrl_flow.c", C_FOR_START, C_FOR_END, e);
 }
+void while_ex() {
+    V_exemplar e = &c_while_ex;
+    print_lines("c/ctrl_flow.c", C_WHILE_START, C_WHILE_END, e);
+}
+void dowhile_ex() {
+    V_exemplar e = &c_dowhile_ex;
+    print_lines("c/ctrl_flow.c", C_DOWHILE_START, C_DOWHILE_END, e);
+}
 
+void if_ex() {
+    V_exemplar e = &c_if_ex;
+    print_lines("c/ctrl_flow.c", C_IF_START, C_IF_END, e);
+}
+
+void brkcon_ex() {
+    V_exemplar e = &c_brkcon_ex;
+    print_lines("c/ctrl_flow.c", C_BRKCON_START, C_BRKCON_END, e);
+}
+}
 #endif

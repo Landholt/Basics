@@ -4,6 +4,8 @@
 #foo: foo.c
 #	gcc -std=c99 -g foo.c -o foo -lm && ./foo
 
+all: basics
+
 basics: main.cpp yasm/main.asm
 	yasm -g dwarf2 -f elf64 yasm/main.asm -o yasm/asm.o -l yasm/main.lst
 	yasm -g dwarf2 -f elf64 yasm/external.asm -o yasm/external.o -l yasm/external.lst
