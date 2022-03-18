@@ -6,12 +6,14 @@
 void init_c() {
     cmenu = {};
     cmenu.push_back({""}); // Workaround to avoid printing with leading whitespace
-    cmenu.push_back(CTYPES);
+    //cmenu.push_back(CTYPES);
     cmenu.push_back(C_CTRL_FLOW);
+    cmenu.push_back(CTHREADS);
 }
 
 void print_cmenu() {
     std::cout << cmenu[0][0] << std::endl; // Workaround to avoid printing with leading whitespace
+    std::cout << INITIAL_PROMPT << std::endl;
     for (int i = 1; i < cmenu.size(); i++) {
         for (int j = 0; j < cmenu[i].size(); j++) {
             std::cout << cmenu[i][j] << " "; 
@@ -37,6 +39,8 @@ void handle_c() {
         else if (c_choice == "dowhile") {c::dowhile_ex();}
         else if (c_choice == "if") {c::if_ex();}
         else if (c_choice == "break") {c::brkcon_ex();}
+        else if (c_choice == "single") {c::single_thread_ex();}
+        else if (c_choice == "mutex") {c::mutex_ex();}
         std::cin >> c_choice;
         CLEARSCREEN;
         print_cmenu();
@@ -67,5 +71,18 @@ void brkcon_ex() {
     V_exemplar e = &c_brkcon_ex;
     print_lines("c/ctrl_flow.c", C_BRKCON_START, C_BRKCON_END, e);
 }
+
+void single_thread_ex() {
+    V_exemplar e = &c_singlethread_ex;
+    print_lines("c/multithreading.c", C_SINGLETHREAD_START, C_SINGLETHREAD_END, e);
+}
+
+void mutex_ex() {
+    V_exemplar e = &c_mutex_ex;
+    print_lines("c/multithreading.c", C_MUTEX_START, C_MUTEX_END, e);
+    std::cout << std::endl;
+    PROMPT; 
+}
+
 }
 #endif

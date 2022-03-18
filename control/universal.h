@@ -9,6 +9,9 @@
 #define CLEARSCREEN std::system("clear")
 #define GOTOMAIN print_mmenu(); handle_mmenu()
 
+#define INITIAL_PROMPT "Enter the text in parentheses to see an example, or press 'q' to exit\n"
+#define PROMPT std::cout << ">> " << std::flush;
+
 extern void print_mmenu();
 extern void handle_mmenu();
 

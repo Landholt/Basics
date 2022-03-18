@@ -5,9 +5,11 @@
 
 #include "../c/integer.c"
 #include "../c/ctrl_flow.c"
+#include "../c/multithreading.c"
 
-#define CTYPES {"Data Types:", "(int)eger types"}
-#define C_CTRL_FLOW {"Control Flow: --- ", "(for) loop --- ", "(while) loop --- ", "(dowhile) loop --- ", "(if) statements --- ", "(break) and continue"}
+#define CTYPES {"Nothing here yet"}
+#define C_CTRL_FLOW {"Control Flow: ", "(for) loop --- ", "(while) loop --- ", "(dowhile) loop --- ", "(if) statements --- ", "(break) and continue"}
+#define CTHREADS {"Multithreading: ", "(single) thread --- ", "(mutex)"}
 
 namespace c {
     void for_ex();
@@ -15,6 +17,8 @@ namespace c {
     void dowhile_ex();
     void if_ex();
     void brkcon_ex();
+    void single_thread_ex();
+    void mutex_ex();
 }
 void init_c();
 void print_cmenu();
