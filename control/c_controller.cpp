@@ -18,15 +18,15 @@ void print_cmenu() {
         for (int j = 0; j < cmenu[i].size(); j++) {
             std::cout << cmenu[i][j] << " "; 
         }
-    std::cout << "\n" << std::endl;
+        std::cout << "\n" << std::endl;
     }
-    std::cout << std::endl;
 }
 
 void load_c() {
     init_c();
     CLEARSCREEN;
     print_cmenu();
+    PROMPT;
     handle_c();
 }
 
@@ -41,6 +41,7 @@ void handle_c() {
         else if (c_choice == "break") {c::brkcon_ex();}
         else if (c_choice == "single") {c::single_thread_ex();}
         else if (c_choice == "mutex") {c::mutex_ex();}
+        PROMPT; 
         std::cin >> c_choice;
         CLEARSCREEN;
         print_cmenu();
@@ -81,7 +82,6 @@ void mutex_ex() {
     V_exemplar e = &c_mutex_ex;
     print_lines("c/multithreading.c", C_MUTEX_START, C_MUTEX_END, e);
     std::cout << std::endl;
-    PROMPT; 
 }
 
 }

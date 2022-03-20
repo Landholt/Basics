@@ -6,11 +6,11 @@
 #include <vector>
 #include <fstream>
 
-#define CLEARSCREEN std::system("clear")
-#define GOTOMAIN print_mmenu(); handle_mmenu()
+#define CLEARSCREEN std::cout << std::flush; std::system("clear")
+#define GOTOMAIN CLEARSCREEN; print_mmenu(); handle_mmenu()
 
-#define INITIAL_PROMPT "Enter the text in parentheses to see an example, or press 'q' to exit\n"
-#define PROMPT std::cout << ">> " << std::flush;
+#define INITIAL_PROMPT "Enter the text in parentheses to see an example, or 'q' to exit\n"
+#define PROMPT std::cout << "\n>> " << std::flush;
 
 extern void print_mmenu();
 extern void handle_mmenu();
@@ -29,7 +29,7 @@ void print_lines(std::string ifile, int start, int end, V_exemplar e) {
         std::cout << line << std::endl;
     }
     file.close();
-    std::cout << "\n====================\n\nOUTPUT: " << std::flush;
+    std::cout << "\n====================\n\nRESULT: " << std::flush;
     e();
 }
 
@@ -44,7 +44,7 @@ void print_lines(std::string ifile, int start, int end, I_exemplar e, int input)
         std::cout << line << std::endl;
     }
     file.close();
-    std::cout << "\n====================\n\nINPUT = " << input <<"\nOUTPUT: " << std::flush;
+    std::cout << "\n====================\n\nINPUT = " << input <<"\nRESULT: " << std::flush;
     e(input);
 }
 

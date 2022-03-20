@@ -6,25 +6,26 @@
 void init_yasm() {
     yasmmenu = {};
     yasmmenu.push_back({""}); // Workaround to avoid printing with leading whitespace
-    yasmmenu.push_back(YASMTYPES);
+    //yasmmenu.push_back(YASMTYPES);
     yasmmenu.push_back(YASM_CMOVS);
 }
 
 void print_yasmmenu() {
     std::cout << yasmmenu[0][0] << std::endl; // Workaround to avoid printing with leading whitespace
+    std::cout << INITIAL_PROMPT << std::endl;
     for (int i = 1; i < yasmmenu.size(); i++) {
         for (int j = 0; j < yasmmenu[i].size(); j++) {
             std::cout << yasmmenu[i][j] << " "; 
         }
     std::cout << "\n" << std::endl;
     }
-    std::cout << std::endl;
 }
 
 void load_yasm() {
     init_yasm();
     CLEARSCREEN;
     print_yasmmenu();
+    PROMPT;
     handle_yasm();
 }
 
@@ -33,6 +34,7 @@ void handle_yasm() {
     while(1) { 
         if (yasm_choice == "q") {break;}
         else if (yasm_choice == "cmovor") {yasm_cmovor();}
+        PROMPT;
         std::cin >> yasm_choice;
         CLEARSCREEN;
         print_yasmmenu();

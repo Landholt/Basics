@@ -14,7 +14,7 @@ using std::system;
 
 string usr_choice;
 
-vector<string> lang_options = {"YASM assembler w/x86-64 instructions (yasm)", "C (c)", "C++ (cpp)", "(help)", "(q)uit"};
+vector<string> lang_options = {"YASM assembler w/x86-64 instructions (yasm)", "C (c)", "C++ (cpp)", "(q)uit"};
 
 string startup_message = "This program is a work in progress.\n\n"
                             "To navigate, enter the text in parentheses that cooresponds to your desired option\n\n";
